@@ -1,0 +1,18 @@
+<h1>Listing Of Tickets</h1>
+
+
+<table>
+  <tr>
+    <th>Event Photo:</th>
+    <th>Event Title:</th>
+    <th colspan=2=></th>
+  </tr>
+ 
+  <% @tickets.each do |ticket| %>
+    <tr>
+      <td>PUT DAMN FOTO HERE</td>
+      <td><%= link_to ticket.event_title, ticket_path(ticket) %></td>
+    </tr>
+  <% end %>
+</table>
+

@@ -1,0 +1,58 @@
+<h1>Edit a Ticket</h1>
+
+<%= form_for :ticket, url:tickets_path(@ticket), method: patch do do |f| %>
+
+ <% if @ticket.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@ticket.errors.count, "error") %> prohibited
+      this ticket from being sold:</h2>
+    <ul>
+    <% @ticket.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+  <% end %>
+
+  <p>
+    <%= f.label :event_title %><br>
+    <%= f.text_field :event_title %>
+  </p>
+
+  <p>
+    <%= f.label :event_type %><br>
+    <%= f.text_field :event_type %>
+  </p>
+
+  <p>
+    <%= f.label :venue %><br>
+    <%= f.text_field :venue %>
+  </p>
+
+  <p>
+    <%= f.label :date %><br>
+    <%= f.text_field :date %>
+  </p>
+
+  <p>
+    <%= f.label :time %><br>
+    <%= f.text_field :time %>
+  </p>
+ 
+  <p>
+    <%= f.label :tickets_available %><br>
+    <%= f.text_field :tickets_available %>
+  </p>
+
+  <p>
+    <%= f.label :total_tickets %><br>
+    <%= f.text_field :total_tickets %>
+  </p>
+
+ 
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', tickets_path %>
