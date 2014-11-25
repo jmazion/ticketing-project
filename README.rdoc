@@ -3,26 +3,51 @@
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
-Things you may want to cover:
+========
+README
+========
 
-* Ruby version
+Ticket app done with Ruby on Rails
 
-* System dependencies
+Code is licenced under GPL
 
-* Configuration
+------------------------------------------------------
+ruby version = 2.1.4
+database creation = sqlite3 
+ 
+ 
+ ==========================================================================================================
+ A SIDE NOTE: We originality did our project in ruby on rails. Our project did not work exactly right so we attempted to use
+ the project sample solution, the image hosting application done with Django, to do the function testing. Only i was able to get the cite up and running 
+ and that was on a linux system. The others had trouble using windows power shell and scripting with windows power shell that is needed to use 
+ virtualenv correctly.  Also even when i got the site up on running on my work machine i had tons of trouble with the 'requirements.txt' file. If you are 
+ familar with the program you know what i am refering too.
+ In short my team mates insisted that we use the original ruby on rails project. I am sorry if it is poorly done. Trust me we have all learned a lot about
+ Ruby on Rails, Django and about web application in general.
+ ==============================================================================================================
+ 
+ Deployment instructions:
+ 
+        Make sure you have installed ruby and ruby on rails along with sqlite3.
+        
+               1. Create a ruby on rails server with the "rails server" command while in your Ruby on Rails directory
+                              this should start a WEBrick server and will be available at "http://localhost:3000 "
+               2. To run functional test with ruby on rails we believe it is as simple as to run the "rake test:functionals" command.
+                              this tests your function cases that were made by Ruby on Rails when creating the application.
+                              of which our application had 3.
+                              
+               3.  You can also test other aspects indepedantly with other "rake test:<##>" commands.
+                              For example.                 
+                                                                           rake test - Test all units and functionals
 
-* Database creation
+                                                                           rake test:functionals - Run tests for functionalsdb:test:prepare
 
-* Database initialization
+                                                                           rake test:integration - Run tests for integrationdb:test:prepare
 
-* How to run the test suite
+                                                                           rake test:plugins - Run tests for pluginsenvironment
 
-* Services (job queues, cache servers, search engines, etc.)
+                                                                           rake test:recent - Run tests for recentdb:test:prepare
 
-* Deployment instructions
+                                                                           rake test:uncommitted - Run tests for uncommitteddb:test:prepare
 
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+                                                                           rake test:units - Run tests for unitsdb:test:prepare
